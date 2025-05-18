@@ -1,7 +1,7 @@
-# LC Framework
+# LC-CompLLM: An Extended Framework for Customized Data Compression with Large Language Model Support
 
-LC is a framework for automatically generating customized lossless and guaranteed-error-bounded lossy data-compression algorithms for individual files or groups of files. The resulting compressors and decompressors are parallelized and produce bit-for-bit the same result on CPUs and GPUs.
-
+## Description
+LC-CompLLM is an extended version of the LC framework, specifically designed to enhance data compression capabilities for large language models (LLMs) and other complex data structures. Building upon the original LC framework, which automatically generates customized lossless and guaranteed-error-bounded lossy data-compression algorithms for individual files or groups of files, LC-CompLLM introduces additional components tailored for compressing large model weights and other specialized data.
 A step-by-step tutorial is available below. If any part of this tutorial does not work for you or you have other question about LC, please do not hesitate to contact us at <burtscher@txstate.edu> so we can help.
 
 
