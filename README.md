@@ -1,4 +1,4 @@
-# LC-CompLLM: An Extended Framework for Customized Data Compression with Large Language Model Support
+# LC-CompLLM: An Extended Framework for LC with Large Language Model Support
 
 ## Description
 LC-CompLLM is an extended version of the LC framework, specifically designed to enhance data compression capabilities for large language models (LLMs) and other complex data structures. Building upon the original LC framework, which automatically generates customized lossless and guaranteed-error-bounded lossy data-compression algorithms for individual files or groups of files, LC-CompLLM introduces additional components tailored for compressing large model weights and other specialized data.
