@@ -1,7 +1,7 @@
 #ifndef H_HANS_1_H
 #define H_HANS_1_H
 
-#include "h_HANS_common.h"
+#include "./include/h_HANS_common.h"
 
 // 8位数据特定设置
 #define H1_MAX_SYMBOLS MAX_SYMBOLS_8BIT

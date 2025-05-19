@@ -1,7 +1,7 @@
 #ifndef H_HANS_2_H
 #define H_HANS_2_H
 
-#include "h_HANS_common.h"
+#include "./include/h_HANS_common.h"
 
 // 16位数据特定设置
 #define H2_MAX_SYMBOLS MAX_SYMBOLS_16BIT
