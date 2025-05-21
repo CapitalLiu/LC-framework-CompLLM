@@ -1,10 +1,3 @@
-/**
- * Author: Claude
- * Time: 2025/05/20
- * Filename: h_HANS.h
- * Description: 通用的数据压缩组件，支持8bit或16bit粒度压缩
- */
-
  #ifndef H_HANS_H
  #define H_HANS_H
  
@@ -238,7 +231,7 @@
  
  // 前向声明模板函数
  template <typename T>
- static inline bool h_HANS(int& csize, uint8_t* in, uint8_t* out);
+ static inline bool h_HANS(long long& csize, uint8_t* in, uint8_t* out);
  
  /**
   * HANS压缩算法 - 8位版本
@@ -248,7 +241,7 @@
   * @param out 输出缓冲区，用于存储压缩后的数据
   * @return 成功返回true，失败返回false
   */
- static inline bool h_HANS8(int& csize, uint8_t* in, uint8_t* out) {
+ static inline bool h_HANS8(long long& csize, uint8_t* in, uint8_t* out) {
      return h_HANS<uint8_t>(csize, in, out);
  }
  
@@ -260,7 +253,7 @@
   * @param out 输出缓冲区，用于存储压缩后的数据
   * @return 成功返回true，失败返回false
   */
- static inline bool h_HANS16(int& csize, uint8_t* in, uint8_t* out) {
+ static inline bool h_HANS16(long long& csize, uint8_t* in, uint8_t* out) {
      return h_HANS<uint16_t>(csize, in, out);
  }
  
@@ -273,7 +266,7 @@
   * @return 成功返回true，失败返回false
   */
  template <typename T>
- static inline bool h_HANS(int& csize, uint8_t* in, uint8_t* out) {
+ static inline bool h_HANS(long long& csize, uint8_t* in, uint8_t* out) {
      const int bit_width = sizeof(T) * 8;
      const int block_size = HANS_DEFAULT_BLOCK_SIZE;
      const int max_symbols = (bit_width == 8) ? HANS_MAX_SYMBOLS_8BIT : HANS_MAX_SYMBOLS_16BIT;
@@ -283,7 +276,7 @@
      }
      
      // 保存原始大小
-     int original_size = csize;
+     long long original_size = csize;
      
      // 分配频率字典
      uint32_t *freq_dict = (uint32_t*)malloc(max_symbols * sizeof(uint32_t));
@@ -356,7 +349,7 @@
      memcpy(out, compressed_data->data, compressed_bytes);
      
      // 更新压缩后的大小
-     csize = (int)compressed_bytes;
+     csize = (long long)compressed_bytes;
      
      // 释放资源
      free(freq_dict);

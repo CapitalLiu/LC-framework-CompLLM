@@ -1,6 +1,6 @@
 #include "include/h_HANS.h"
 
-static inline bool h_HANS_2(int& csize, byte* in, byte* out)
+static inline bool h_HANS_2(long long& csize, byte* in, byte* out)
 {
     return h_HANS<uint16_t>(csize, in, out);
 }
